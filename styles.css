@@ -11,7 +11,7 @@ body {
   --main-odd-color: #36eee0;
   --white: #ffffff;
   --black: #000000;
-  --conatiner-size: 30rem;
+  --conatiner-size: 69.7vh;
 }
 nav {
   background-color: var(--main-dark-color);
@@ -26,20 +26,44 @@ nav p {
   font-size: 1.8rem;
   font-weight: bold;
 }
+main p {
+  text-align: center;
+  padding: 1vh;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 .container {
-  border: 2px solid var(--black);
-  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-basis: auto;
 }
 .game-container {
   height: var(--conatiner-size);
   width: var(--conatiner-size);
+  margin: 1rem;
   border: 2px solid var(--black);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 .cells {
+  height: 151.133px;
   border: 1px solid black;
+  font-size: 120px;
+  font-weight: bold;
+  text-align: center;
+}
+button {
+  border-style: none;
+  padding: 0.5rem;
+  font-size: clamp(0.5em, 2.5vh, 2rem);
+  width: 10rem;
+  box-shadow: 2px 2px black;
+  border-radius: 10px;
+  border: 4px solid var(--black);
+}
+.btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
