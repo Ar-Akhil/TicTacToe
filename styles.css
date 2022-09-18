@@ -53,7 +53,7 @@ nav p {
   grid-template-columns: repeat(3, 1fr);
 }
 .cells {
-  height: calc(--conatiner-size / 3);
+  height: calc(var(--conatiner-size) / 3);
   border: 1px solid black;
   font-size: 120px;
   font-weight: bold;
@@ -98,6 +98,11 @@ button {
     --conatiner-size: 43vh;
   }
   .cells {
-    height: calc(--conatiner-size / 3);
+    height: calc(var(--conatiner-size) / 3);
+    font-size: 110px;
+  }
+  .popup-model {
+    height: 30%;
+    width: 90%;
   }
 }
