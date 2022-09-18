@@ -13,6 +13,12 @@ body {
   --black: #000000;
   --conatiner-size: 69.7vh;
 }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
 nav {
   background-color: var(--main-dark-color);
   color: var(--white);
@@ -47,7 +53,7 @@ nav p {
   grid-template-columns: repeat(3, 1fr);
 }
 .cells {
-  height: 151.133px;
+  height: calc(--conatiner-size / 3);
   border: 1px solid black;
   font-size: 120px;
   font-weight: bold;
@@ -86,4 +92,12 @@ button {
 }
 .none {
   display: none;
+}
+@media screen and (max-width: 450px) {
+  body {
+    --conatiner-size: 43vh;
+  }
+  .cells {
+    height: calc(--conatiner-size / 3);
+  }
 }
