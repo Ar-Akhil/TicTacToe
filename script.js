@@ -41,12 +41,12 @@ function gameplay(board) {
         cell.textContent = getPlayerSymbol();
         board.splice(index, 1, cell.textContent);
         board.join();
-        console.log(index);
       }
-      const result = document.getElementById("resultText");
+      const result = document.getElementById("result");
       if (checkWinner(index)) {
-        console.log(index);
         result.textContent = getPlayerSymbol() + " " + "is the winner";
+        model();
+        board.splice(0, board.length);
         return;
       } else if (round === 9) {
         result.textContent = " It's a draw";
@@ -76,4 +76,12 @@ function gameplay(board) {
         )
       );
   };
+  const model = () => {
+    const containerBody = document.getElementById("model");
+    containerBody.classList.remove("none");
+  };
+  const result = document.getElementById("restart");
+  result.addEventListener("click", () => {
+    window.location.reload();
+  });
 }
