@@ -3,7 +3,9 @@
 
 TicTacToe is a game for two players who take turns marking the spaces in a three-by-three grid with X or O. The player who succeeds in placing three of their marks in a horizontal, vertical, or diagonal row is the winner.
 
-Live Link : https://ar-akhil.github.io/TicTacToe## Screenshots
+Live Link : https://ar-akhil.github.io/TicTacToe
+
+## Screenshots
 
 ![Desktop Version](https://github.com/Ar-Akhil/TicTacToe/blob/main/assets/desktop-version.png)
 
