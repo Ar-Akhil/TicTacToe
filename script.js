@@ -1,3 +1,5 @@
+// GameBoard Function to add the board to frontend
+
 const gameboard = (() => {
   let board = Array(8);
   console.log(board);
@@ -13,12 +15,16 @@ const gameboard = (() => {
   }
   gameplay(board);
 
+  // To get the index of the board
+
   const getField = (index) => {
     if (index > board.length) return;
     return board[index];
   };
   return { getField };
 })();
+
+// Player Object
 
 function player(symbol) {
   this.symbol = symbol;
@@ -27,6 +33,9 @@ function player(symbol) {
   };
   return { getSymbol };
 }
+
+// Gameplay Object
+
 function gameplay(board) {
   const player1 = player("X");
   const player2 = player("O");
@@ -53,9 +62,14 @@ function gameplay(board) {
       }
     });
   });
+
+  // To change player turns
+
   const getPlayerSymbol = () => {
     return round % 2 === 1 ? player1.getSymbol() : player2.getSymbol();
   };
+
+  // Win Condition
 
   const checkWinner = (index) => {
     const winConditions = [
@@ -76,6 +90,9 @@ function gameplay(board) {
         )
       );
   };
+
+  //To desplay model and restart the game
+
   const model = () => {
     const containerBody = document.getElementById("model");
     containerBody.classList.remove("none");
